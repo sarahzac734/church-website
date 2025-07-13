@@ -3,9 +3,11 @@ import Image from "next/image"
 export default function Bishops (){
     return (<div>
     <div className='back'></div>
-    <div className='pt-24 pb-6'><Image src="/images/img10.jpg" width={8000} height={2000} alt="hello"/></div>
-    <div className="pt-10 pb-20 text-black text-center text-3xl font-black"><h1>Metropolitans</h1></div>
-    <div id="gato" className="grid grid-cols-6 gap-4">
+    <div id ="hello" className="flex justify-center items-center ...">
+    <div className='pt-24'><Image src="/images/img10.jpg" width={800} height={240} alt="hello"/></div>
+    </div>
+    <div className="pt-20 pb-15 text-black text-center text-3xl font-semibold"><h1>Metropolitans</h1></div>
+    <div  className="grid grid-cols-6 gap-4">
       <div className="col-span-4 col-start-2 ..."><img className="rounded-full w-90 h-100 mx-auto" src="/images/bishop.png" alt="hello"/></div>
       <div className="col-span-2 col-start-3 ..."><span style={{fontWeight:'bolder', fontSize:'25px'}}>H.H. Ignatius Aphrem II </span><br/>Supreme Head of the Universal Syrian Orthodox Church</div>
       <div className="col-start-1 col-end-3 ..."><img className="rounded-full w-100 h-100 mx-auto" src="/images/severios2.png" alt="hello"/></div>
@@ -20,3 +22,4 @@ export default function Bishops (){
 
 </div>)
 }
+//grey color that was before: #393E46

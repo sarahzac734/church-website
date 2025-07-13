@@ -30,10 +30,14 @@ const NavBar = () => {
                 </button>
                 <div className="dropdown-content">
                     <Link href="/metropolitans">Metropolitans</Link>
+                    <Link href="/clergy">Clergy</Link>
                     <Link href="/admin">Administration</Link>
                 </div>
                 </div>
             </li>
+            <Link href="/service">
+                <li className="ml-10 hover:border-b text-base">Service</li>
+            </Link>
             <Link href="/news">
                 <li className="ml-10 hover:border-b text-base">News</li>
             </Link>
@@ -44,7 +48,7 @@ const NavBar = () => {
                 </button>
                 <div className="dropdown-content">
                     <Link href="/prayerForm">Prayer Request Form</Link>
-                    <Link href="/calendar">Qurbana Calendar</Link>
+                    <Link href="/calendar">Holy Qurbana Calendar</Link>
                 </div>
                 </div>
             </li>

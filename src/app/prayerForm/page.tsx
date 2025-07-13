@@ -1,10 +1,12 @@
 export default function PrayerForm(){
     return (
         <>
-        <div className="pt-50 pb-20">
+        <div className="pt-20"> 
+            <div id="hello" className="text-3xl text-center pt-20 p-10 font-semibold text-white">Prayer Request Form</div>
+        </div>
+        <div className="pt-10 pb-20">
         <form>
             <div className="text-center">
-                <h2 className="text-3xl font-semibold text-black">Prayer Request Form</h2>
                 <div className="mt-20 px-6">
             <div className=" mb-5">
                 <input type="text" name="first_name" id="first_name" className="py-2.5 px-2 rounded-lg border-black w-100 border-1 text-sm text-gray-900" placeholder="First Name" required />

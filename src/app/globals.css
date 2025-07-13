@@ -65,5 +65,9 @@ body {
 }
 
 .blue {
-  background-color: #c0c4b0;
+  background-color: #005C78;
+}
+
+#hello {
+  background-color: #005C78;
 }
