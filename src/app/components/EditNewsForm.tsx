@@ -1,17 +1,49 @@
-export default function EditNews () {
+'use client'
+
+import { useState } from "react"
+import { useRouter } from "next/navigation"
+
+export default function EditNews ({id, title, description}) {
+
+    const [newTitle, setNewTitle] = useState(title)
+    const [newDescription, setNewDes] = useState(description)
+    const router = useRouter()
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+
+        try {
+            const x = await fetch(`http://localhost:3000/api/news/${id}`, {
+                method: "PUT",
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify({ newTitle, newDescription}),
+            })
+
+            router.push('/news')
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     return (
         <>
          <div className="pt-20"> 
             <div id="hello" className="text-3xl text-center pt-20 p-10 font-semibold text-white">Add News</div>
         </div>
-       <form  className="mt-6 mb-20 flex flex-col gap-3"> 
+       <form  onSubmit={handleSubmit} className="mt-6 mb-20 flex flex-col gap-3"> 
             <input 
                 name="title"
+                onChange={(e) => setNewTitle(e.target.value)}
+                value={newTitle}
                 className="border border-slate-500 mx-6 px-8 py-2 "
                 type="text"
                 placeholder="Topic Title"/>
             <input 
                 name="description"
+                onChange={(e) => setNewDes(e.target.value)}
+                value={newDescription}
                 className="border border-slate-500 mx-6 px-8 py-2 "
                 type="text" 
                 placeholder="Topic Description"/>
