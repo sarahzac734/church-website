@@ -51,14 +51,14 @@ export default function AddNews() {
                 name="title"
                 className="border border-slate-500 mx-6 px-8 py-2 "
                 type="text"
-                placeholder="Topic Title"/>
+                placeholder="News Title"/>
             <input 
                 onChange={(e) => setDescription(e.target.value)}
                 value={description}
                 name="description"
                 className="border border-slate-500 mx-6 px-8 py-2 "
                 type="text" 
-                placeholder="Topic Description"/>
+                placeholder="News Description"/>
             <button type="submit" className="bg-sky-950 text-white mx-6 px-8 py-2 font-bold w-fit">Add News</button>
        </form>
        </>
