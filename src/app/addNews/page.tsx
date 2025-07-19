@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
+import * as Yup from "yup"
 
 export default function AddNews() {
 
@@ -9,10 +10,20 @@ export default function AddNews() {
     const [description, setDescription] = useState("")
     const router = useRouter()
 
+    const [errors, setErrors] = useState({})
+
+    const validationSchema = Yup.object({
+        title:Yup.string().required("Title Required"),
+        description:Yup.string().required("Description Required"),
+     })
+
     const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
         e.preventDefault()
 
         try {
+
+            await validationSchema.validate({title, description},{abortEarly: false} )
+
             const res = await fetch( 'http://localhost:3000/api/news', {
                 method: "POST",
                 headers: {
@@ -27,15 +38,17 @@ export default function AddNews() {
                 throw new Error("Failed to create ")
             }
 
+
         } catch (error) {
-            console.log(error)
+            const newErrors = {}
+
+            error.inner.forEach(theError => {
+                newErrors[theError.path] = theError.message
+            })
+            setErrors(newErrors)
         }
     }
 
-    // const handleSubmit =  (e: React.SyntheticEvent<HTMLFormElement>) => {
-    //     e.preventDefault()
-    //     console.log("boo")
-    // }
 
 
 
@@ -51,7 +64,9 @@ export default function AddNews() {
                 name="title"
                 className="border border-slate-500 mx-6 px-8 py-2 "
                 type="text"
-                placeholder="News Title"/>
+                placeholder="News Title"
+                />
+
             <input 
                 onChange={(e) => setDescription(e.target.value)}
                 value={description}
