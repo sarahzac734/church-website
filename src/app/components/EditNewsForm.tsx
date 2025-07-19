@@ -39,15 +39,15 @@ export default function EditNews ({id, title, description}) {
                 value={newTitle}
                 className="border border-slate-500 mx-6 px-8 py-2 "
                 type="text"
-                placeholder="Topic Title"/>
+                placeholder="News Title"/>
             <input 
                 name="description"
                 onChange={(e) => setNewDes(e.target.value)}
                 value={newDescription}
                 className="border border-slate-500 mx-6 px-8 py-2 "
                 type="text" 
-                placeholder="Topic Description"/>
-            <button type="submit" className="bg-sky-950 text-white mx-6 px-8 py-2 font-bold w-fit">Update News</button>
+                placeholder="News Description"/>
+            <button type="submit" className="bg-sky-950 text-white cursor-pointer rounded-sm mx-6 px-8 py-2 font-bold w-fit">Edit News</button>
        </form>
        </>
     )

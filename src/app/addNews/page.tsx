@@ -22,7 +22,7 @@ export default function AddNews() {
             } )
 
             if (res.ok){
-                router.push('/news')
+                router.push('/webAdmin')
             }else{
                 throw new Error("Failed to create ")
             }
@@ -59,7 +59,7 @@ export default function AddNews() {
                 className="border border-slate-500 mx-6 px-8 py-2 "
                 type="text" 
                 placeholder="News Description"/>
-            <button type="submit" className="bg-sky-950 text-white mx-6 px-8 py-2 font-bold w-fit">Add News</button>
+            <button type="submit" className="bg-sky-950 text-white cursor-pointer rounded-sm mx-6 px-8 py-2 font-bold w-fit">Add News</button>
        </form>
        </>
        

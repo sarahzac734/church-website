@@ -1,15 +1,24 @@
+'use client'
+
 import Image from "next/image"
-import NewsList from "./components/NewsList"
+import ImageSlider from "./components/ImageSlider"
+
+
+const IMAGES = ["/images/test.png"]
+
 
 export default function Home() {
   return (
     <>
-    <div className="pt-50 pb-20">    
+    <div className="pt-10">    
     <div className="text-center">
-        <h2 className="text-3xl font-semibold text-black">Home</h2>
-        
+        <div className="flex pt-15 pb-50 justify-center items-center ..." >
+            <ImageSlider imageUrls={IMAGES}/>
+        </div>
+
     </div>
     </div>
+   
     </>
   )
 }

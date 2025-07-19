@@ -1,16 +1,20 @@
-import NewsList from "../components/NewsList";
-import Link from "next/link";
 
-export default function News() {
+import Link from "next/link";
+import AdminButton from "../components/AdminButtin";
+import NewsList from "../components/NewsList";
+
+export default  function News() {
+   
+
     return (
         <>
         <div className="pt-20"> 
             <div id="hello" className="text-3xl text-center pt-20 p-10 font-semibold text-white">News</div>
         </div>
-        <div>
-            <button className="bg-blue-500 text-center"><Link href="/addNews">Add News</Link></button>
+        <div className="pb-50">
             <NewsList />
         </div>
+        <div className="text-center"> <button className="bg-sky-950 rounded-sm font-bold px-10 text-white"><Link href="/webAdmin">Admin</Link></button></div>
         </>
         
     )
