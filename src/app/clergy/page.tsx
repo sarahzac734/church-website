@@ -11,11 +11,14 @@ export default function Clergy () {
         <div className="text-center">
             <h2 className="text-3xl font-semibold text-black">Clergy</h2>
             <div className="pt-30 pb-30 flex justify-center text-center items-center ...">
-                    <div>
-                    <p className="pb-4 underline font-bold text-xl">Vicar</p>
-                    <IoPerson className="bg-sky-950" color="white" size={100}/> 
-                    <p className="pt-4">Fr. Anil K Thomas</p>
+                    <div className="rounded-2xl w-70 h-70 mx-auto bg-stone-100 text-center">
+                        <div className="mt-10">
+                            <p className="pb-4 underline font-bold text-xl">Vicar</p>
+                            <IoPerson className="bg-sky-950 mx-auto" color="white" size={100}/> 
+                            <p className="pt-4">Fr. Anil K Thomas</p>
+                        </div>
                     </div>
+
             </div>
         </div>
         </div>

@@ -24,7 +24,7 @@ export default function AddNews() {
 
             await validationSchema.validate({title, description},{abortEarly: false} )
 
-            const res = await fetch( 'http://localhost:3000/api/news', {
+            const res = await fetch( process.env.NEXT_PUBLIC_URL + '/api/news', {
                 method: "POST",
                 headers: {
                 "Content-type": "application/json",
@@ -40,12 +40,7 @@ export default function AddNews() {
 
 
         } catch (error) {
-            const newErrors = {}
-
-            error.inner.forEach(theError => {
-                newErrors[theError.path] = theError.message
-            })
-            setErrors(newErrors)
+            console.log(error)
         }
     }
 

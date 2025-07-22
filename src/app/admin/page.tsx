@@ -12,6 +12,7 @@ export default function Admins() {
                 <h2 className="text-3xl font-semibold text-black">Administration Team</h2>
                 <div className="pt-30 pb-30 flex justify-center items-center ...">
                     <div className="columns-2 gap-50">
+                        
                         <p className="pb-4 font-bold text-xl">Secretary</p>
                         <IoPerson className="bg-sky-950" color="white" size={100}/> 
                         <p className="pt-4">Thomas Jacob</p>

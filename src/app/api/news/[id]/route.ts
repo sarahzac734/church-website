@@ -3,7 +3,7 @@ import News from "@/models/news"
 import { NextRequest, NextResponse } from "next/server";
 
 
-export async function PUT(request:NextRequest, { params }) {
+export async function PUT(request:NextRequest, { params}: {params: {id: string}}) {
 
     try{
         const { id } = params
@@ -11,7 +11,7 @@ export async function PUT(request:NextRequest, { params }) {
         await connect()
         await News.findOneAndUpdate({_id: id}, {title, description})
         return NextResponse.json({ message: "News updated"}, {status: 200})
-
+        
 
     }catch (error:any){
         return NextResponse.json({ error: error.message}, {status: 500})
@@ -20,9 +20,14 @@ export async function PUT(request:NextRequest, { params }) {
 }
 
 
-export async function GET(request:NextRequest, { params}) {
+export async function GET(request:NextRequest, { params}: {params: {id: string}}) {
+
+    try {
     const { id } = params
     await connect()
-    const one = await News.findOne({_id: id})
-    return NextResponse.json({one}, {status:200})
+    const data = await News.findOne({_id: id})
+    return NextResponse.json({data}, {status:200})
+    } catch (error:any) {
+        return NextResponse.json({ error: error.message}, {status: 500})
+    }
 }

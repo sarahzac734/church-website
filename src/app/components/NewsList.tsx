@@ -1,7 +1,7 @@
 
 async function getNews (){
   
-        const res = await fetch( process.env.URL + '/api/news')
+        const res = await fetch( process.env.NEXT_PUBLIC_URL + '/api/news')
 
         return res.json()
 }

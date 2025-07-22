@@ -18,27 +18,27 @@ export default function Bishops (){
     </div>
     <div className="pt-20 pb-15 text-black text-center text-3xl font-semibold"><h1>Metropolitans</h1></div>
             <div className="rounded-2xl w-140 h-140 mx-auto bg-stone-100 text-center mb-10" data-aos="fade-right" data-aos-easing="linear"
-     data-aos-duration="1250"> 
+     data-aos-duration="1400"> 
                 <div><img className="pt-15 w-60 h-auto mx-auto" src="/images/bishop.png" alt="hello"/></div>
                 <div className="pt-5"><span  style={{fontWeight:'bolder', fontSize:'25px'}}>H.H. Ignatius Aphrem II </span><br/>Supreme Head of the Universal Syrian Orthodox Church</div>
             </div>
             <div className="rounded-2xl w-140 h-140 mx-auto bg-stone-100 text-center mb-10" data-aos="fade-left" data-aos-easing="linear"
-     data-aos-duration="1250"> 
+     data-aos-duration="1400"> 
                 <div><img className="pt-15 w-60 h-auto mx-auto" src="/images/severios.jpg" alt="hello"/></div>
                 <div className="pt-5"><span  style={{fontWeight:'bolder', fontSize:'25px'}}>H.E. Kuriakose Mor Severios</span><br/>Archbishop and Chief Metropolitan of the Knanaya Archdiocese and Metropolitan of Chingavanam & Gulf Regions</div>
             </div>
             <div className="rounded-2xl w-140 h-140 mx-auto bg-stone-100 text-center mb-10" data-aos="fade-right" data-aos-easing="linear"
-     data-aos-duration="1250"> 
+     data-aos-duration="1400"> 
                 <div><img className="pt-15 w-60 h-auto mx-auto" src="/images/silvanos-ayoub.png" alt="hello"/></div>
                 <div className="pt-5"><span  style={{fontWeight:'bolder', fontSize:'25px'}}>H.G. Silvanos Ayoub</span><br/>Metropolitan of North America and Canada Regions <br/> of the Knanaya Archdiocese</div>
             </div>
             <div className="rounded-2xl w-140 h-140 mx-auto bg-stone-100 text-center mb-10" data-aos="fade-left" data-aos-easing="linear"
-     data-aos-duration="1250"> 
+     data-aos-duration="1400"> 
                 <div><img className="pt-15 w-60 h-auto mx-auto" src="/images/gregorios.jpg" alt="hello"/></div>
                 <div className="pt-5"><span  style={{fontWeight:'bolder', fontSize:'25px'}}>H.G. Kuriakose Mor Gregorios</span><br/>Metropolitan of Kallissery & Malabar Regions <br/> of the Knanaya Archdiocese</div>
             </div>
             <div className="rounded-2xl w-140 h-140 mx-auto bg-stone-100 text-center mb-10" data-aos="fade-right" data-aos-easing="linear"
-     data-aos-duration="1250"> 
+     data-aos-duration="1400"> 
                 <div><img className="pt-15 w-60 h-auto mx-auto" src="/images/kuriakose.png" alt="hello"/></div>
                 <div className="pt-5"><span  style={{fontWeight:'bolder', fontSize:'25px'}}>H.G. Ivanios Kuriakose</span><br/>Metropolitan of Ranny & Outside Kerala Regions <br/> of the Knanaya Archdiocese</div>
             </div>
