@@ -1,24 +1,18 @@
 'use client'
 
-import Image from "next/image"
-import ImageSlider from "./components/ImageSlider"
-
-
-const IMAGES = ["/images/test.png"]
-
+import Carousel from './components/Carousel'
 
 export default function Home() {
+
   return (
     <>
-    <div className="pt-10">    
-    <div className="text-center">
-        <div className="flex pt-15 pb-50 justify-center items-center ..." >
-            <ImageSlider imageUrls={IMAGES}/>
-        </div>
+    <div className="pt-25">  
+      <div className='mb-50'>
+          <Carousel />
+       </div>
 
     </div>
-    </div>
-   
+
     </>
   )
 }

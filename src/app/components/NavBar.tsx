@@ -15,7 +15,7 @@ const NavBar = () => {
 
 
   return (
-   <nav className="fixed w-full h-25 shadow-xl bg-white">
+   <nav className="fixed  z-1000 w-full h-25 shadow-xl bg-white">
     <div className='flex justify-between items-center h-full w-full px-8 2xl:px-16 text-black'>
       <Link href="/" className='font-black'>St. John the Baptist Knanaya Church of Greater Washington</Link>
       <div className="hidden md:flex">
