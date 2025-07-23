@@ -26,70 +26,68 @@ export default function Contact (){
         <div className="pt-20"> 
             <div id="hello" className="text-3xl text-center pt-20 p-10 font-semibold text-white">Contact Us</div>
         </div>
-        <div className="pt-10 pb-20">
+        <div className="pt-5 pb-20">
         <form onSubmit={handleOnSubmit}>
-            <div className="text-center">
-            <div className="mt-20 px-6">
-            <div className=" mb-5">
+            <div className="mt-20 ">
+            <div className="pb-10 grid grid-cols-2 mx-auto gap-y-5 gap-x-10 w-120 lg:w-190">
                 <input 
-                        type="text"
-                        value={firstName}                 
-                        onChange={(e) => setFirstName(e.target.value)}
-                        id="firstName"
-                        name="firstName" 
-                        className="py-2.5 px-2 rounded-lg border-black w-100 border-1 text-sm text-gray-900"
-                        placeholder="First Name" 
-                    />
-            </div>
-            <div className="mb-5">
+                     type="text"
+                     value={firstName}                 
+                     onChange={(e) => setFirstName(e.target.value)}
+                     id="firstName"
+                     name="firstName" 
+                     className="... px-3 border border-stone-400 rounded-xl h-10  bg-stone-100"
+                     placeholder="First Name" 
+                     />
+           
+                
+
+                <input 
+                     type="text"
+                     value={lastName}
+                     onChange={(e) => setLastName(e.target.value)}
+                     id="lastName" 
+                     name="lastName" 
+                     className="... px-3 border border-stone-400 rounded-xl h-10  bg-stone-100"
+                     placeholder="Last Name" 
+                     />
+
+                <input 
+                     type="email"
+                     value={email}  
+                     onChange={(e) => setEmail(e.target.value)}
+                     id="email" 
+                     name="email" 
+                     className="... px-3 border border-stone-400 rounded-xl h-10  bg-stone-100"                     
+                     placeholder="Email" 
+                     />
+
                 <input 
                     type="text"
                     value={reason}
                     onChange={(e) => setReason(e.target.value)}
                     id="reason"
                     name="reason"
-                    className="py-2.5 px-2 rounded-lg border-black w-100 border-1 text-sm text-gray-900"
+                    className="... px-3 border border-stone-400 rounded-xl h-10  bg-stone-100"
                     placeholder="Reason"
                     />
+                </div>
+                </div>
 
-            </div>
-            <div className="mb-5">
-                <input 
-                        type="text"
-                        value={lastName}
-                        onChange={(e) => setLastName(e.target.value)}
-                        id="lastName" 
-                        name="lastName" 
-                        className="py-2.5 px-2 rounded-lg border-black border-1 w-100 text-sm text-gray-900" 
-                        placeholder="Last Name" 
-                        />
-            </div>
-
-            <div className="mb-5">
-              <input 
-                     type="email"
-                     value={email}  
-                     onChange={(e) => setEmail(e.target.value)}
-                     id="email" 
-                     name="email" 
-                     className="py-2.5 px-2 rounded-lg border-black border-1 w-100 text-sm text-gray-900" 
-                     placeholder="Email" 
-                     />
-          </div>
-          </div>
-          <div className="text-center">
-                    <input 
+          <div className="w-120 lg:w-190 h-60 grid grid-cols-1 mx-auto">
+                    <textarea 
                             name="comment"
                             id="comment"
                             value={comment}
                             onChange={(e) => setComment(e.target.value)}
-                            className="border-1 px-2 rounded-lg"
+                            className=" border border-stone-400 p-3 rounded-xl bg-stone-100 ..."                           
                             placeholder="Comment"
                         />
           </div>
-          <button className="border-1 cursor-pointer rounded-lg">Submit</button>
+            <div className="py-10 pb-50 w-120 lg:w-190 grid grid-cols-1 mx-auto">
+                <button className="bg-cyan-800 rounded-xl h-10 text-white font-bold cursor-pointer">Submit</button>
             </div>
-        </form>
+         </form>
         </div>
         </>)
 }
