@@ -17,8 +17,8 @@ const NavBar = () => {
    <nav className="fixed  z-1000 w-full h-25 shadow-xl bg-white">
     <div className='flex justify-between items-center h-full w-full px-8 2xl:px-16 text-black'>
       <Link href="/" className='font-black'>St. John the Baptist Knanaya Church of Greater Washington</Link>
-      <div className="hidden md:flex">
-        <ul className="hidden md:flex">
+      <div className="hidden lg:flex">
+        <ul className="hidden lg:flex">
             <Link href="/">
                 <li className="ml-10 hover:border-b text-base">Home</li>
             </Link>
@@ -46,7 +46,6 @@ const NavBar = () => {
                 <i className="fa fa-caret-down"></i>
                 </button>
                 <div className="dropdown-content">
-                    <Link href="/prayerForm">Prayer Request Form</Link>
                     <Link href="/prayers">Holy Week Prayers</Link>
                     <Link href="/calendar">Holy Qurbana Calendar</Link>
 
@@ -59,9 +58,61 @@ const NavBar = () => {
 
         </ul>
       </div>
-      <div onClick={handleNav} className="md:hidden cursor-pointer pl-24">
+      <div onClick={handleNav} className="lg:hidden cursor-pointer pl-24">
         <AiOutlineMenu size={25} />
       </div>
+    </div>
+    <div className={
+        menuOpen ? "p-20 lg:hidden bg-cyan-700 ease-in duration-500" : "top-[-100%] ease-in duration-500" 
+    }>
+       { menuOpen &&
+                <div className="flex-col py-3">
+                    <ul>
+                    <Link href="/">
+                        <li 
+                            onClick={() => setMenuOpen(false)}
+                            className="cursor-pointer py-3">
+                            Home
+                        </li>
+                    </Link>
+                    <li>
+                        <div className="dropdown">
+                        <button className="ml-10 hover:border-b text-base">About Us
+                        <i className="fa fa-caret-down"></i>
+                        </button>
+                        <div className="dropdown-content">
+                            <Link onClick={() => setMenuOpen(false)} href="/metropolitans">Metropolitans</Link>
+                            <Link onClick={() => setMenuOpen(false)} href="/clergy">Clergy</Link>
+                            <Link onClick={() => setMenuOpen(false)} href="/admin">Administration</Link>
+                        </div>
+                        </div>
+                    </li>
+                    <Link href="/service">
+                        <li onClick={() => setMenuOpen(false)} className="cursor-pointer">Service</li>
+                    </Link>
+                    <Link href="/news">
+                        <li onClick={() => setMenuOpen(false)} className="cursor-pointer">News</li>
+                    </Link>
+                    <li>
+                        <div className="dropdown">
+                        <button className="ml-10 hover:border-b text-base">Resources
+                        <i className="fa fa-caret-down"></i>
+                        </button>
+                        <div className="dropdown-content">
+                            <Link onClick={() => setMenuOpen(false)} href="/prayers">Holy Week Prayers</Link>
+                            <Link onClick={() => setMenuOpen(false)} href="/calendar">Holy Qurbana Calendar</Link>
+
+                        </div>
+                        </div>
+                    </li>
+                    <Link href="/contact">
+                        <li onClick={() => setMenuOpen(false)} className="cursor-pointer">Contact Us</li>
+                    </Link>
+
+                    </ul>
+            
+                </div>
+            }
     </div>
    </nav>
   )

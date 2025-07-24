@@ -9,9 +9,9 @@ export default function ImageSlider ({theImage}: ImageSliderProps) {
     
 
     return (
-        <div className="justify-center items-center ...">
+        <div className="mx-auto ">
                 
-                <Image  src={theImage} width={800} height={240} alt="hello"/>
+                <Image  src={theImage} width={1600} height={240} alt="hello"/>
         </div>
     )
 

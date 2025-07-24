@@ -11,7 +11,7 @@ import ImageSlider from './ImageSlider'
 
 
 export default function Carousel() {
-    const IMAGES = ["/images/admin.jpg", "/images/photo4.jpg"]
+    const IMAGES = ["/images/kerala (1).png"]
 
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay(),Fade()])
 
@@ -26,7 +26,7 @@ export default function Carousel() {
     return (
         <>
             <div className="embla">
-            <div className="embla__viewport mx-auto h-auto max-w-lg border" ref={emblaRef}>
+            <div className="embla__viewport mx-auto h-80 lg:h-120 max-w " ref={emblaRef}>
             <div className="embla__container">
                 {IMAGES.map(image => (
                     <div className="embla__slide">

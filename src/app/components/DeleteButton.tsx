@@ -38,7 +38,7 @@ export default function DeleteButton ({ id }) {
     return ( 
         <>
             <div>{dlt && <div ><div className="border-stone-400 rounded-2xl pt-8 pb-8 bg-stone-200 w-100">
-                        <h2 className="text-center font-bold text-l">Are you sure you?</h2>
+                        <h2 className="text-center font-bold text-l">Are you sure?</h2>
                         <div className="flex gap-2 pt-8 justify-center">
                         <div>
                             <button onClick={cancelBtn} className="bg-cyan-600 w-30 h-10 font-extrabold cursor-pointer rounded-2xl text-white">Cancel</button>
