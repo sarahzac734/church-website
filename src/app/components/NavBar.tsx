@@ -47,8 +47,9 @@ const NavBar = () => {
                 </button>
                 <div className="dropdown-content">
                     <Link href="/prayerForm">Prayer Request Form</Link>
-                    <Link href="/calendar">Holy Qurbana Calendar</Link>
                     <Link href="/prayers">Holy Week Prayers</Link>
+                    <Link href="/calendar">Holy Qurbana Calendar</Link>
+
                 </div>
                 </div>
             </li>
