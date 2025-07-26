@@ -10,10 +10,10 @@ import { useCallback } from 'react'
 import ImageSlider from './ImageSlider'
 
 
-export default function Carousel() {
-    const IMAGES = ["/images/photo4.jpg"]
+export default function SmallCarousel() {
+    const IMAGES = ["/images/img2.jpg","/images/img4.jpg"]
 
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay(),Fade()])
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Fade()])
 
     const scrollPrev = useCallback(() => {
         if (emblaApi) emblaApi.scrollPrev()
@@ -26,11 +26,11 @@ export default function Carousel() {
     return (
         <>
             <div className="embla">
-            <div className="embla__viewport mx-auto h-80 lg:h-120 max-w " ref={emblaRef}>
+            <div className="embla__viewport mx-20 w-80 h-200 lg:h-120" ref={emblaRef}>
             <div className="embla__container">
                 {IMAGES.map(image => (
                     <div className="embla__slide">
-                        <ImageSlider theImage={image} />
+                        <img className="border-2" src={image} />
                         
                     </div>
                 ))}
@@ -46,4 +46,5 @@ export default function Carousel() {
            </div>
         </>
     )
+
 }

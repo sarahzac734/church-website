@@ -63,7 +63,7 @@ const NavBar = () => {
       </div>
     </div>
     <div className={
-        menuOpen ? "p-20 lg:hidden bg-cyan-700 ease-in duration-500" : "top-[-100%] ease-in duration-500" 
+        menuOpen ? "p-20 lg:hidden bg-cyan-700 ease-in duration-500" : "top-[-100%]" 
     }>
        { menuOpen &&
                 <div className="flex-col py-3">
