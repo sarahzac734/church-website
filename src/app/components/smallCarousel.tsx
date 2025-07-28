@@ -30,7 +30,7 @@ export default function SmallCarousel() {
             <div className="embla__container">
                 {IMAGES.map(image => (
                     <div className="embla__slide">
-                        <img className="border-2" src={image} />
+                        <img src={image} />
                         
                     </div>
                 ))}

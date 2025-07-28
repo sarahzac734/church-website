@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import Carousel from './components/Carousel'
 import AOS from 'aos'
 import "aos/dist/aos.css"
-import SmallCarousel from './components/smallCarousel'
+import Card from './components/Card'
 
 export default function Home() {
   useEffect(() => {
@@ -23,16 +23,14 @@ export default function Home() {
         <img className=" w-150 h-auto mx-auto lg:float-left" src="/images/admin.jpg"/>
         <p className='font-bold mt-5 lg:text-xl px-4 lg:px-10  text-center'>We are located in the DC Metropolitan area and we invite you to join us in prayer on the 3rd Saturday of every month.
                 We look forward to seeing you at our next service! </p>
-        
+
         </article>
        </section>
-
-       <section>
-       <article className='pt-10 grid mx-20 lg:grid-cols-2 justify-center items-center ...'>
-       <SmallCarousel />
-       <p className='font-bold mt-5 lg:text-xl px-4 lg:px-10  text-center'>On May 24th, 2024, we gathered as a community to celebrate the uplifting Hosanna Service, guided by the insightful leadership of Fr. Anil K Thomas. It was a day filled with gratitude, reflection, and spiritual renewal. </p>
-        
-        </article>
+        <section>
+          <h1 className="text-center font-extrabold text-4xl mb-10">Recent Events</h1>
+        </section>
+       <section className="grid grid-cols-1">
+                <Card />
        </section>
     </div>
 
