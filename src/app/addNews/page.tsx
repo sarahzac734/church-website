@@ -23,7 +23,7 @@ export default function AddNews() {
 
             await validationSchema.validate({title, description},{abortEarly: false} )
 
-            const res = await fetch( `${process.env.NEXT_PUBLIC_URL}/api/news`, {
+            const res = await fetch( `${process.env.NEXT_PUBLIC_API_URL}/api/news`, {
                 method: "POST",
                 headers: {
                 "Content-type": "application/json",

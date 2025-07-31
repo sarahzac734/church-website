@@ -9,7 +9,7 @@ interface NewsProp {
 
 async function getNews (){
   
-        const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/news`)
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/news`)
             console.log("hollaaa"+JSON.stringify(res) + process.env.NEXT_PUBLIC_URL)
         
         return res.json()

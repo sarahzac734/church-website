@@ -2,7 +2,7 @@ import EditNewsForm from "../../components/EditNewsForm";
 
 async function getNewsByID (id:string){
   try {
-    const res = await fetch( `${process.env.NEXT_PUBLIC_URL}/api/news/${id}`)
+    const res = await fetch( `${process.env.NEXT_PUBLIC_API_URL}/api/news/${id}`)
     const x = await res.json()
     return x
   } catch (error) {
