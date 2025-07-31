@@ -11,7 +11,7 @@ export default function Contact (){
     const [reason, setReason] = useState("")
 
 
-    async function handleOnSubmit(e: React.SyntheticEvent){
+    async function handleOnSubmit(e: React.SyntheticEvent<HTMLFormElement>){
         e.preventDefault();
 
         await fetch ('/api/email', {

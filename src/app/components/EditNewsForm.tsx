@@ -18,7 +18,7 @@ export default function EditNews ({id, title, description}: EditProps) {
     const [newDescription, setNewDes] = useState(description)
     const router = useRouter()
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
         e.preventDefault()
 
         try {
