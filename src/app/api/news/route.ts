@@ -9,8 +9,8 @@ export async function POST(request: NextRequest){
         await connect()
         await News.create({title, description})
         return NextResponse.json({message: "Topic Created"}, {status: 201})
-    } catch (error: any){
-        return NextResponse.json({error: error.message}, {status: 500})
+    } catch (error){
+        return NextResponse.json({error: "something wrong in POST"}, {status: 500})
     }
     
 }

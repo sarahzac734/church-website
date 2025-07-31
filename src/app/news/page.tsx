@@ -1,6 +1,5 @@
 
 import Link from "next/link";
-import AdminButton from "../components/AdminButtin";
 import NewsList from "../components/NewsList";
 
 export default  function News() {

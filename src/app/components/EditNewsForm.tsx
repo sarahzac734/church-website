@@ -3,7 +3,16 @@
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 
-export default function EditNews ({id, title, description}) {
+interface EditProps {
+    id: string,
+    title: string,
+    description: string,
+  }
+
+
+
+
+export default function EditNews ({id, title, description}: EditProps) {
 
     const [newTitle, setNewTitle] = useState(title)
     const [newDescription, setNewDes] = useState(description)
@@ -13,7 +22,7 @@ export default function EditNews ({id, title, description}) {
         e.preventDefault()
 
         try {
-            const x = await fetch( process.env.NEXT_PUBLIC_URL + `/api/news/${id}`, {
+             await fetch( process.env.NEXT_PUBLIC_URL + `/api/news/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json"

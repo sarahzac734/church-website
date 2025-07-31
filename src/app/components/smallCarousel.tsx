@@ -1,13 +1,11 @@
 'use client'
 
 import useEmblaCarousel from 'embla-carousel-react'
-import Autoplay from 'embla-carousel-autoplay'
 import Fade from 'embla-carousel-fade'
 
 import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from "react-icons/io";
 
 import { useCallback } from 'react'
-import ImageSlider from './ImageSlider'
 
 
 export default function SmallCarousel() {

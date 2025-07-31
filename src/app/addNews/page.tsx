@@ -10,7 +10,6 @@ export default function AddNews() {
     const [description, setDescription] = useState("")
     const router = useRouter()
 
-    const [errors, setErrors] = useState({})
 
     const validationSchema = Yup.object({
         title:Yup.string().required("Title Required"),
