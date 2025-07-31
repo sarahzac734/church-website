@@ -9,7 +9,7 @@ import { useCallback } from 'react'
 
 
 export default function SmallCarousel() {
-    const IMAGES = ["/images/img2.jpg","/images/img4.jpg"]
+    const IMAGES = [{id:1,name:"/images/img2.jpg"},{id:2,name:"/images/img4.jpg"}]
 
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Fade()])
 
@@ -26,9 +26,9 @@ export default function SmallCarousel() {
             <div className="embla">
             <div className="embla__viewport mx-20 w-80 h-200 lg:h-120" ref={emblaRef}>
             <div className="embla__container">
-                {IMAGES.map((image,index) => (
+                {IMAGES.map((image) => (
                     <div className="embla__slide">
-                        <img key={index} src={image} />
+                        <img key={image.id} src={image.name} />
                         
                     </div>
                 ))}
