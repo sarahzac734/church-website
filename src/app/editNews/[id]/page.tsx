@@ -11,7 +11,7 @@ async function getNewsByID (id:string){
 }
 
 
-export default async function EditNews({ params}: {params: {id: string}}) {
+export default async function EditNews({ params}: {params: Promise<{id: string}>}) {
 
   const { id } = await params
   const y = await getNewsByID(id)
