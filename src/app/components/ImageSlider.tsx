@@ -11,7 +11,7 @@ export default function ImageSlider ({theImage}: ImageSliderProps) {
     return (
         <div className="mx-auto ">
                 
-                <Image  src={theImage} width={1600} height={240} alt="hello"/>
+                < img className="w-1600 h-auto" src={theImage} alt="hello"/>
         </div>
     )
 

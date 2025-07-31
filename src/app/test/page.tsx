@@ -1,12 +1,26 @@
-<section className='mb-100'>
-        <div><h2 className="font-extrabold text-2xl text-center">Welcome to St. John the Baptist Knanaya Church of Greater Washington</h2></div>
-        <article className='pt-10 grid mx-20 grid-cols-2 justify-center items-center ...'>
-        <p className='font-bold text-xl px-10  text-center'>We are located in the DC Metropolitan area and we invite you to join us in prayer on the 3rd Saturday of every month.
-        We look forward to seeing you at our next service! </p>
-        <img className=" w-150 h-auto float-right ..." src="/images/admin.jpg"/>
-        
-        </article>
+import SmallCarousel from "../components/smallCarousel";
 
-               
-       </section>
+
+export default function Test() {
+        return (
+                <>
+                <div className="pt-80">
+                </div>
+
+                <div className="border rounded-2xl border-slate-800 bg-cyan-800  w-200 h-120 mx-auto">
+                        <div className="grid grid-cols-2">
+                          <div className="-mx-12 mt-5"> <SmallCarousel/> </div>
+                          <div>
+                                <p className="mx-8 font-bold text-white text-2xl pt-10 pb-5 underline">Celebrating Hosanna Service</p>
+                                <p className="mt-8 rounded-2xl mx-5 pt-10 bg-stone-100 w-auto h-80 p-4 text-xl text-center">On May 24th, 2024, we gathered as a community to celebrate the uplifting Hosanna Service, guided by the insightful leadership of Fr. Anil K Thomas. It was a day filled with gratitude, reflection, and spiritual renewal.</p>
+                          </div>
+                        </div>
+                        
+                </div>
+
+                <div className="pb-1200">
+                </div>
+                </>
+        )
+}
        
