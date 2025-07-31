@@ -14,6 +14,7 @@ export async function PUT(request:NextRequest, { params}: {params: {id: string}}
         
 
     }catch (error){
+        console.log(error)
         return NextResponse.json({ error: "something wrong in PUT"}, {status: 500})
 
     }
@@ -27,7 +28,8 @@ export async function GET(request:NextRequest, { params}: {params: {id: string}}
     await connect()
     const data = await News.findOne({_id: id})
     return NextResponse.json({data}, {status:200})
-    } catch (error:any) {
-        return NextResponse.json({ error: error.message}, {status: 500})
+    } catch (error) {
+        console.log(error)
+        return NextResponse.json({ error: "something wrong in GET"}, {status: 500})
     }
 }

@@ -26,9 +26,9 @@ export default function SmallCarousel() {
             <div className="embla">
             <div className="embla__viewport mx-20 w-80 h-200 lg:h-120" ref={emblaRef}>
             <div className="embla__container">
-                {IMAGES.map(image => (
+                {IMAGES.map((image,index) => (
                     <div className="embla__slide">
-                        <img src={image} />
+                        <img key={index} src={image} />
                         
                     </div>
                 ))}
