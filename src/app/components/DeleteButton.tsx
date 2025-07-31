@@ -4,7 +4,12 @@ import { FaTrashAlt } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-export default function DeleteButton ({ id }) {
+
+interface DeleteProp {
+    id: string,
+  }
+
+export default function DeleteButton ({ id }: DeleteProp) {
     const router = useRouter()
     const [dlt,setdelete] = useState(false)
     const [ok, setOk] = useState(false)
