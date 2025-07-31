@@ -29,8 +29,8 @@ export default function Carousel() {
             <div className="embla__viewport mx-auto h-80 lg:h-120 max-w " ref={emblaRef}>
             <div className="embla__container">
                 {IMAGES.map((image) => (
-                    <div className="embla__slide">
-                        <ImageSlider key={image.id} theImage={image.name} />
+                    <div key={image.id} className="embla__slide">
+                        <ImageSlider theImage={image.name} />
                     </div>
                 ))}
             </div>
