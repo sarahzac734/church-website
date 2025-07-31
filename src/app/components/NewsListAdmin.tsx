@@ -3,6 +3,12 @@ import DeleteButton from "./DeleteButton";
 import Link from "next/link";
 
 
+interface NewsProp {
+    _id:string,
+    title:string,
+    description:string,
+}
+
 async function getNews (){
   
         const res = await fetch( process.env.NEXT_PUBLIC_URL + '/api/news')
@@ -15,7 +21,7 @@ export default async function NewsList () {
 
    const {news} = await getNews()
    
-   const items = news.map(n => (
+   const items = news.map((n:NewsProp) => (
             <li key={n._id}>
             <div  className="p-4 border border-slate-300 my-3 mx-4 flex justify-between gap-4 items-start">
                 <div>
