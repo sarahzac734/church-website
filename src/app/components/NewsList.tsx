@@ -1,15 +1,15 @@
 
-interface NewsProp {
-    _id:string,
-    title:string,
-    description:string,
-}
+// interface NewsProp {
+//     _id:string,
+//     title:string,
+//     description:string,
+// }
 
-async function getNews (){
+// async function getNews (){
   
-        const res = await fetch(`https://church-website-mauve.vercel.app/api/news`)        
-        return res.json()
-}
+//         const res = await fetch(`https://church-website-mauve.vercel.app/api/news`)        
+//         return res.json()
+// }
 
 
 export default async function NewsList () {
