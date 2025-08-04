@@ -1,28 +1,33 @@
 
-// interface NewsProp {
-//     _id:string,
-//     title:string,
-//     description:string,
-// }
+interface NewsProp {
+    _id:string,
+    title:string,
+    description:string,
+}
 
-// async function getNews (){
+async function getNews (){
   
-//         const res = await fetch(`https://church-website-mauve.vercel.app/api/news`)        
-//         return res.json()
-// }
+        const res = await fetch(`https://church-website-mauve.vercel.app/api/news`) 
+        console.log("whyyy" + res)   
+
+        return res.json()
+}
 
 
 export default async function NewsList () {
 
-  
-            
-        
-        
-    return<div  className="p-4 border border-slate-300 my-3 mx-4 flex justify-between gap-4 items-start">
-    <div>
-        <h2 className="font-bold text-xl">hi</h2>
-        <div>hi</div>
-    </div>
-</div>
+   const {news} = await getNews()
+    console.log("Object " + JSON.stringify(news))
+   const items = news.map((n:NewsProp) => (
+            <li key={n._id}>
+            <div  className="p-4 border border-slate-300 my-3 mx-4 flex justify-between gap-4 items-start">
+                <div>
+                    <h2 className="font-bold text-xl">{n.title}</h2>
+                    <div>{n.description}</div>
+                </div>
+            </div>
+            </li>
+          ))
+    return <ul>{items}</ul>
 }
 

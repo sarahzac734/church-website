@@ -17,7 +17,7 @@ async function getNews (){
 }
 
 
-export default async function NewsList () {
+export default async function NewsListAdmin () {
 
    const {news} = await getNews()
    
