@@ -23,7 +23,7 @@ export default function AddNews() {
 
             await validationSchema.validate({title, description},{abortEarly: false} )
 
-            const res = await fetch( `${process.env.NEXT_PUBLIC_API_URL}/api/news`, {
+            const res = await fetch( `https://church-website-il3vp9ikp-sarah-s-projects-cff97257.vercel.app/api/news`, {
                 method: "POST",
                 headers: {
                 "Content-type": "application/json",

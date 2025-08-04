@@ -22,7 +22,7 @@ export default function EditNews ({id, title, description}: EditProps) {
         e.preventDefault()
 
         try {
-             await fetch( `${process.env.NEXT_PUBLIC_API_URL}/api/news/${id}`, {
+             await fetch( `https://church-website-il3vp9ikp-sarah-s-projects-cff97257.vercel.app/api/news/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json"

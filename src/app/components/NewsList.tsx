@@ -9,7 +9,7 @@ interface NewsProp {
 
 async function getNews (){
   
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/news`)        
+        const res = await fetch(`https://church-website-il3vp9ikp-sarah-s-projects-cff97257.vercel.app/api/news`)        
         return res.json()
 }
 
