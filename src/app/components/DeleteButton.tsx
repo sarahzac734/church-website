@@ -30,7 +30,7 @@ export default function DeleteButton ({ id }: DeleteProp) {
         setOk(true)
 
         if(ok){
-            const res = await fetch( `https://church-website-il3vp9ikp-sarah-s-projects-cff97257.vercel.app/api/news?id=${id}`,{
+            const res = await fetch( `church-website-mauve.vercel.app/api/news?id=${id}`,{
                 method: "DELETE",
             })
             setdelete(false)

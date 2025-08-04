@@ -2,7 +2,7 @@ import EditNewsForm from "../../components/EditNewsForm";
 
 async function getNewsByID (id:string){
   try {
-    const res = await fetch( `https://church-website-il3vp9ikp-sarah-s-projects-cff97257.vercel.app/api/news/${id}`)
+    const res = await fetch( `https://church-website-mauve.vercel.app/api/news/${id}`)
     const x = await res.json()
     return x
   } catch (error) {
