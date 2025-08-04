@@ -22,7 +22,7 @@ export default function EditNews ({id, title, description}: EditProps) {
         e.preventDefault()
 
         try {
-             await fetch( `https://church-website-mauve.vercel.app/api/news/${id}`, {
+             await fetch( `/api/news/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json"

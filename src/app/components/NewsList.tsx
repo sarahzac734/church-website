@@ -9,7 +9,7 @@ interface NewsProp {
 
 async function getNews (){
   
-        const res = await fetch(`https://church-website-mauve.vercel.app/api/news`)        
+        const res = await fetch(`/api/news`)        
         return res.json()
 }
 
