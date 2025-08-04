@@ -8,7 +8,7 @@ interface NewsProp {
 async function getNews (){
   
         const res = await fetch(`https://church-website-mauve.vercel.app/api/news`) 
-        console.log("whyyy" + res)   
+        console.log("whyyy" + JSON.stringify(res.json()))  
 
         return res.json()
 }
@@ -17,7 +17,6 @@ async function getNews (){
 export default async function NewsList () {
 
    const {news} = await getNews()
-    console.log("Object " + JSON.stringify(news))
    const items = news.map((n:NewsProp) => (
             <li key={n._id}>
             <div  className="p-4 border border-slate-300 my-3 mx-4 flex justify-between gap-4 items-start">
