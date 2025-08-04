@@ -14,18 +14,15 @@ async function getNews (){
 
 export default async function NewsList () {
 
-   const {news} = await getNews()
-
-   const items = news.map((n:NewsProp) => (
-            <li key={1}>
-            <div  className="p-4 border border-slate-300 my-3 mx-4 flex justify-between gap-4 items-start">
-                <div>
-                    <h2 className="font-bold text-xl">hi</h2>
-                    <div>hi</div>
-                </div>
-            </div>
-            </li>
-          ))
-    return <ul>{items}</ul>
+  
+            
+        
+        
+    return<div  className="p-4 border border-slate-300 my-3 mx-4 flex justify-between gap-4 items-start">
+    <div>
+        <h2 className="font-bold text-xl">hi</h2>
+        <div>hi</div>
+    </div>
+</div>
 }
 
